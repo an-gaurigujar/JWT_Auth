@@ -12,10 +12,8 @@ import { CommonModule } from '@angular/common';
 export class ProtectedComponent implements OnInit {
   data: any;
 
-  constructor(private authService: AuthService) {
-    console.log('hello');
-  }
- 
+  constructor(private authService: AuthService) {}
+
   ngOnInit() {
     this.authService.getProtectedData().subscribe({
       next: (response) => {
